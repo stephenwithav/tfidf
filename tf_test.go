@@ -17,7 +17,7 @@ func TestTermCount(t *testing.T) {
 	}
 
 	for i, s := range given {
-		found := TermCount(strings.NewReader(s))
+		found := TermFrequency(strings.NewReader(s))
 
 		for term, freq := range found {
 			if freq != expected[i][term] {

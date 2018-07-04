@@ -46,9 +46,9 @@ func isValid(r rune) bool {
 	return unicode.IsLetter(r) || unicode.IsNumber(r)
 }
 
-// termCount is a function that returns the term-frequency of the given io.Reader.
-// No stop-words are eliminated yet.
-func termCount(doc io.Reader) map[string]float64 {
+// TermFrequency is a function that returns the term-frequency of the
+// given io.Reader.  No stop-words are eliminated yet.
+func TermFrequency(doc io.Reader) map[string]float64 {
 	scanner := bufio.NewScanner(doc)
 	scanner.Split(scanAlphaNum)
 
